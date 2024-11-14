@@ -1,6 +1,7 @@
 const textInput = document.getElementById("textInput");
 const analyzeButton = document.getElementById("analyzeButton");
-const result = document.getElementById("result");
+const result = document.getElementById("result-cont");
+const resultText = document.getElementById("result");
 const userMessage = document.getElementById("user-message");
 const chatBot = document.getElementById("chat-bot");
 // Funzione per chiamare l'API di OpenAI
@@ -10,7 +11,7 @@ async function analyzeSentiment() {
   const inputText = textInput.value;
 
   if (!inputText) {
-    return (result.textContent = "Scrivi un messaggio da analizare...");
+    return (resultText.textContent = "Scrivi un messaggio da analizare...");
   }
 
   //   result.textContent = "Analyzing...";
@@ -26,9 +27,11 @@ async function analyzeSentiment() {
     }
     console.log(modificationSuggestion);
   }
-  analyzeButton.textContent = "Inviato";
+  analyzeButton.textContent = "INVIATO";
+  resultText.textContent = "";
+  //   result.textContent = "";
   textInput.value = "";
-  analyzeButton.classList.remove("#analyzeButton");
+  analyzeButton.classList.remove("analyze-btn");
   analyzeButton.classList.add("inviato");
 }
 async function suggestModification(message) {
@@ -37,7 +40,7 @@ async function suggestModification(message) {
     headers: {
       "Content-Type": "application/json",
       Authorization:
-        "Bearer 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", // Inserisci qui la tua chiave API
+        "Bearer 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", // Inserisci qui la tua chiave API
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",

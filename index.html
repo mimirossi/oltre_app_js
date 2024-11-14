@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sentiment Analysis App</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="../src/style.css" />
+    <script src="../src/script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -15,17 +15,17 @@
         id="textInput"
         placeholder="Scrivi il tuo messaggio da analizzare..."
       ></textarea>
-      <button id="analyzeButton" class="analyze-btn">Analizza</button>
-      <div id="result">
-        Le risposte appaiono qui..
-        <p id="user-message" class="user-message box">ciao</p>
-        <p id="chat-bot" class="bot-message box">
-          fuyfhjttsyfvoiuytredfghjiuytrfdgh
-        </p>
+      <button id="analyzeButton" class="analyze-btn">ANALIZZA</button>
+      <div id="result-cont">
+        <p id="result">Le risposte appaiono qui..</p>
+        <div>
+          <p id="user-message" class="box"></p>
+          <p id="chat-bot" class="box"></p>
+        </div>
       </div>
       <div class="btn-cont">
-        <button class="publish-mod end-btn">PUBLISHED MODIFIED</button>
-        <button class="publish-yours end-btn">PUBLISHED YOURS</button>
+        <button class="publish-mod end-btn">PUBBLICA MODIFICA</button>
+        <button class="publish-yours end-btn">PUBBLICA TUO</button>
       </div>
     </div>
   </body>
