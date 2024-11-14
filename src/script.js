@@ -40,7 +40,7 @@ async function suggestModification(message) {
     headers: {
       "Content-Type": "application/json",
       Authorization:
-        "Bearer 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", // Inserisci qui la tua chiave API
+        "Bearer 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", // Inserisci qui la tua chiave API
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
